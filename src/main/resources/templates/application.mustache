@@ -1,13 +1,36 @@
 <html>
+    <head>
+        <title>Base Camp Nomination</title>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no"
+        />
+        <link rel="stylesheet" href="/css/main.css" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <h1>Welcome to the application process</h1>
+        <form class="d-flex flex-column" action="/apply" method="POST">
+            <label for="name"
+                >Name:
+                <input type="text" name="name" />
+            </label>
 
-<head>
-	<title>Base Camp Nomination</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="/css/main.css" />
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-</head>
-<body>
-<h1>Welcome</h1>
-</body>
+            <label for="email"
+                >Email:
+                <input type="email" name="email" />
+            </label>
+
+            <label for="school"
+                >Current School:
+                <input type="text" name="school" />
+            </label>
+        </form>
+    </body>
 </html>
