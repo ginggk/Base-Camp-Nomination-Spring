@@ -19,18 +19,80 @@
         <form class="d-flex flex-column" action="/apply" method="POST">
             <label for="name"
                 >Name:
-                <input type="text" name="name" />
+                <input type="text" name="name" value="John Doe" />
             </label>
 
             <label for="email"
                 >Email:
-                <input type="email" name="email" />
+                <input type="email" name="email" value="johndoe@email.com" />
             </label>
 
             <label for="school"
                 >Current School:
-                <input type="text" name="school" />
+                <input type="text" name="school" value="High School"/>
             </label>
+
+            <p> Do you meet the eligibility requirements? </p>
+            <div class="d-flex">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="eligibility" id="exampleRadios1" value="true" checked>
+                  <label class="form-check-label" for="exampleRadios1">
+                    yes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="eligibility" id="exampleRadios2" value="false">
+                  <label class="form-check-label" for="exampleRadios2">
+                    no
+                  </label>
+                 </div>
+            </div>
+
+            <label for="age">
+            Age:
+                <input type="number" name="age" value="18" />
+            </label>
+
+            <label for="phoneNumber">
+                    Phone Number:
+                            <input type="text" name="phoneNumber" placeholder="123-456-7890" value="123-456-7890"/>
+            </label>
+
+            <label for="graduation">
+            Graduation Date:
+                          <input type="text" name="graduation" value="02/14/20"/>
+             </label>
+
+            <label for="plan">
+                   <lower> What is your current plan for next year?</lower>
+                            <textarea rows="4" cols="50" name="plan" value="My plan"></textarea>
+            </label>
+
+            <label for="aptitude">
+                               Aptitude:
+                               <lower>Please share a specific example of when you were a strong problem solver.</lower>
+                                        <textarea rows="4" cols="50" name="aptitude" value="My aptitude"></textarea>
+
+                        </label>
+
+              <label for="dedication">
+                        Dedication / Work Ethic / Heart:
+                        <lower>Please share a specific example of your dedication and work ethic.</lower>
+                           <textarea rows="4" cols="50" name="dedication" value="My dedication"></textarea>
+
+              </label>
+
+            <label for="passion">
+                       Passion / Persistence:
+                       <lower>Please tell us about something you are passionate about and have worked hard to achieve.
+                           <textarea rows="4" cols="50" name="passion" value="My passion"></textarea>
+
+                           This can be clubs, sports teams, hobbies, church groups, etc. </lower>
+            </label>
+
+           <button> submit
+           </button>
+
         </form>
     </body>
 </html>

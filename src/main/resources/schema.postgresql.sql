@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS students (
     id SERIAL PRIMARY KEY,
     name TEXT,
-    email URL,
+    email TEXT,
     school TEXT,
     eligibility BOOLEAN,
     age INTEGER,
