@@ -15,84 +15,186 @@
         />
     </head>
     <body>
-        <h1>Welcome to the application process</h1>
-        <form class="d-flex flex-column" action="/apply" method="POST">
-            <label for="name"
-                >Name:
-                <input type="text" name="name" value="John Doe" />
-            </label>
-
-            <label for="email"
-                >Email:
-                <input type="email" name="email" value="johndoe@email.com" />
-            </label>
-
-            <label for="school"
-                >Current School:
-                <input type="text" name="school" value="High School"/>
-            </label>
-
-            <p> Do you meet the eligibility requirements? </p>
-            <div class="d-flex">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="eligibility" id="exampleRadios1" value="true" checked>
-                  <label class="form-check-label" for="exampleRadios1">
-                    yes
-                  </label>
+        <div class="container pt-3">
+            <div class="pb-3">
+                <div style="background-color: #6e4015" class="card ">
+                    <div class="card-body text-center text-white">
+                        <h1 class="card-title">Welcome to the application process!</h1>
+                    </div>
                 </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="eligibility" id="exampleRadios2" value="false">
-                  <label class="form-check-label" for="exampleRadios2">
-                    no
-                  </label>
-                 </div>
             </div>
+            <form class=" d-flex flex-column" action="/apply" method="POST">
+                <div class="form-group">
+                    <label for="name"
+                        >Name:
+                        <input type="text" name="name" value="John Doe" required/>
+                    </label>
+                </div>
+                <div class="form-group">
 
-            <label for="age">
-            Age:
-                <input type="number" name="age" value="18" />
-            </label>
+                    <label for="email"
+                        >Email:
+                        <input
+                            type="email"
+                            name="email"
+                            value="johndoe@email.com"
+                        />
+                    </label>
+                </div>
+                <div class="form-group">
 
-            <label for="phoneNumber">
-                    Phone Number:
-                            <input type="text" name="phoneNumber" placeholder="123-456-7890" value="123-456-7890"/>
-            </label>
+                    <label for="school"
+                        >Current School:
+                        <input type="text" name="school" value="High School" required/>
+                    </label>
+                </div>
+                <div class="form-group">
 
-            <label for="graduation">
-            Graduation Date:
-                          <input type="text" name="graduation" value="02/14/20"/>
-             </label>
+                    <p>Do you meet the eligibility requirements?</p>
+                    <div class="d-flex">
+                        <div class="form-check pr-2">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="eligibility"
+                                id="exampleRadios1"
+                                value="true"
+                                checked
+                            required />
+                            <label
+                                class="form-check-label"
+                                for="exampleRadios1"
+                            >
+                                Yes
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input
+                                class="form-check-input"
+                                type="radio"
+                                name="eligibility"
+                                id="exampleRadios2"
+                                value="false"
+                            required />
+                            <label
+                                class="form-check-label"
+                                for="exampleRadios2"
+                            >
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
 
-            <label for="plan">
-                   <lower> What is your current plan for next year?</lower>
-                            <textarea rows="4" cols="50" name="plan" value="My plan"></textarea>
-            </label>
+                    <label for="age">
+                        Age:
+                        <input type="number" name="age" value="18" />
+                    </label>
+                </div>
+                <div class="form-group">
 
-            <label for="aptitude">
-                               Aptitude:
-                               <lower>Please share a specific example of when you were a strong problem solver.</lower>
-                                        <textarea rows="4" cols="50" name="aptitude" value="My aptitude"></textarea>
+                    <label for="phoneNumber">
+                        Phone Number:
+                        <input
+                            type="text"
+                            name="phoneNumber"
+                            placeholder="123-456-7890"
+                            value="123-456-7890"
+                        required />
+                    </label>
+                </div>
+                <div class="form-group">
 
-                        </label>
+                    <label for="graduation">
+                        Graduation Date:
+                        <input type="text" name="graduation" value="02/14/20" required/>
+                    </label>
+                </div>
 
-              <label for="dedication">
-                        Dedication / Work Ethic / Heart:
-                        <lower>Please share a specific example of your dedication and work ethic.</lower>
-                           <textarea rows="4" cols="50" name="dedication" value="My dedication"></textarea>
+                <div class="container">
+                    <div class="pb-3">
 
-              </label>
+                        <div style="background-color: #6e4015" class="card ">
+                            <div class="card-body text-center text-white">
+                                <h4 class="card-title">Base Camp Coding Academy is looking for students with the aptitude, and the dedication, to succeed in this program. Please share stories and examples of these two traits that demonstrate why you believe you will make an excellent candidate. </h4>
+                            </div>
+                        </div>
+                    </div>
 
-            <label for="passion">
-                       Passion / Persistence:
-                       <lower>Please tell us about something you are passionate about and have worked hard to achieve.
-                           <textarea rows="4" cols="50" name="passion" value="My passion"></textarea>
+                </div>
 
-                           This can be clubs, sports teams, hobbies, church groups, etc. </lower>
-            </label>
 
-           <button> submit
-           </button>
 
-        </form>
+
+
+                <div class="pb-3">
+
+                    <label for="plan"> <h4> What is your current plan for next year? </h4></label>
+                    <p> do you plan to do after you graduate high school if it were not for Base Camp?</p>
+                    <textarea
+                            rows="4"
+                            cols="50"
+                            name="plan"
+                            value="My plan"
+                            class="form-control"
+                    required></textarea>
+                </div>
+                <div class="pb-3">
+
+                    <label for="aptitude">
+                        <h4>Aptitude: </h4></label>
+                    <p>Please share a specific example of when you were a
+                            strong problem solver.</p>
+                    <textarea
+                        class="form-control"
+                        rows="4"
+                        cols="50"
+                        name="aptitude"
+                        value="My aptitude"
+                    required></textarea>
+                    
+                </div>
+                <div class="pb-3">
+
+                    <label for="dedication">
+                        <h4>Dedication / Work Ethic / Heart: </h4>
+                    </label>
+                    <p>Please share a specific example of your dedication and work ethic.</p>
+                    <textarea
+                        rows="4"
+                        cols="50"
+                        name="dedication"
+                        value="My dedication"
+                        class="form-control"
+                    required></textarea>
+                    
+                </div>
+                <div class="pb-3">
+
+                    <label for="passion">
+                        <h4>Passion / Persistence: </h4>
+                    </label>
+                    <p>Please tell us about something you are passionate
+                            about and have worked hard to achieve.
+                            
+                            This can be clubs, sports teams, hobbies, church
+                            groups, etc.</p>
+                    <textarea
+                        rows="4"
+                        cols="50"
+                        name="passion"
+                        value="My passion"
+                        class="form-control"
+                    required></textarea>
+
+                </div>
+                <div class="form-group">
+
+                    <button class="btn btn-success">Submit</button>
+                </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
