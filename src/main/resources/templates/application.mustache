@@ -6,7 +6,7 @@
             name="viewport"
             content="width=device-width, initial-scale=1, user-scalable=no"
         />
-        <link rel="stylesheet" href="/css/main.css" />
+        <link rel="stylesheet" href="css/main.css" />
         <link
             rel="stylesheet"
             href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -14,8 +14,22 @@
             crossorigin="anonymous"
         />
     </head>
-    <body>
-        <div class="container pt-3">
+    <body class="application-bg bg-light">
+        <nav style="background-color: #3b1b0c" class="navbar navbar-expand-lg pb-3">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href='/'> Home </a>
+                </li>
+                <li class="nav-item active">
+                    <a class=" nav-link text-white" href='/interview'> Interview </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="basecamp-logo">
+
+            <img src="css/images/basecamp-logo.png" alt="">
+        </div>
+        <div class="container application-box pt-3 border p-4 bg-white shadow-sm">
             <div class="pb-3">
                 <div style="background-color: #6e4015" class="card ">
                     <div class="card-body text-center text-white">
@@ -23,30 +37,48 @@
                     </div>
                 </div>
             </div>
+
+            <div class="mb-3">
+                <h6 class="mt-2 mb-3">
+                    Base Camp Coding Academy</br>
+                    301 North Main Street<br>
+                    Water Valley, MS 38965<br>
+                    <a href="">http://www.basecampcodingacademy.org</a> <br>
+                </h6>
+                <h6 class="mb-2">
+                    Thank you for applying to BCCA! This is the first step of a two part 
+                    application process. Strong candidates will be contacted for an in-person interview, so make 
+                    sure to check your email for follow-up! Base Camp is a targeted program for north Mississippi high school 
+                    seniors able to live within driving distance of Water Valley.
+                </h6>
+                <h6 class="mb-2">
+                    Space at BCCA is very limited. This is a huge opportunity, and responsibility. 
+                    Please help us understand why you are the right person to receive this opportunity.
+                    In order to be eligible to apply you must have first been nominated by a teacher, employer, or other 
+                    qualified individual who can speak to your abilities.
+                </h6>
+            </div>
             <form class=" d-flex flex-column" action="/apply" method="POST">
                 <div class="form-group">
-                    <label for="name"
-                        >Name:
+                        <h4>Name: </h4>
                         <input type="text" name="name" value="John Doe" required/>
-                    </label>
+                  
                 </div>
                 <div class="form-group">
 
-                    <label for="email"
-                        >Email:
+                   <h4> Email:</h4>
                         <input
                             type="email"
                             name="email"
                             value="johndoe@email.com"
                         />
-                    </label>
+                  
                 </div>
                 <div class="form-group">
 
-                    <label for="school"
-                        >Current School:
+                   <h4> Current School:</h4>
                         <input type="text" name="school" value="High School" required/>
-                    </label>
+                    
                 </div>
                 <div class="form-group">
 
@@ -87,29 +119,26 @@
                 </div>
                 <div class="form-group">
 
-                    <label for="age">
-                        Age:
+                    <h4> Age:</h4>
                         <input type="number" name="age" value="18" />
-                    </label>
                 </div>
                 <div class="form-group">
 
-                    <label for="phoneNumber">
-                        Phone Number:
+                    
+                       <h4> Phone Number:</h4>
                         <input
                             type="text"
                             name="phoneNumber"
                             placeholder="123-456-7890"
                             value="123-456-7890"
                         required />
-                    </label>
                 </div>
                 <div class="form-group">
 
-                    <label for="graduation">
-                        Graduation Date:
+                    <h4>Graduation Date:</h4>
+                        
                         <input type="text" name="graduation" value="02/14/20" required/>
-                    </label>
+                  
                 </div>
 
                 <div class="container">
@@ -117,7 +146,9 @@
 
                         <div style="background-color: #6e4015" class="card ">
                             <div class="card-body text-center text-white">
-                                <h4 class="card-title">Base Camp Coding Academy is looking for students with the aptitude, and the dedication, to succeed in this program. Please share stories and examples of these two traits that demonstrate why you believe you will make an excellent candidate. </h4>
+                                <h4 class="card-title">Base Camp Coding Academy is looking for students with the aptitude,
+                                     and the dedication, to succeed in this program. Please share stories and examples of
+                                      these two traits that demonstrate why you believe you will make an excellent candidate. </h4>
                             </div>
                         </div>
                     </div>
@@ -130,8 +161,8 @@
 
                 <div class="pb-3">
 
-                    <label for="plan"> <h4> What is your current plan for next year? </h4></label>
-                    <p> do you plan to do after you graduate high school if it were not for Base Camp?</p>
+                     <h4> What is your current plan for next year? </h4>
+                    <p> Do you plan to do after you graduate high school if it were not for Base Camp?</p>
                     <textarea
                             rows="4"
                             cols="50"
@@ -142,8 +173,7 @@
                 </div>
                 <div class="pb-3">
 
-                    <label for="aptitude">
-                        <h4>Aptitude: </h4></label>
+                        <h4>Aptitude: </h4>
                     <p>Please share a specific example of when you were a
                             strong problem solver.</p>
                     <textarea
@@ -157,9 +187,8 @@
                 </div>
                 <div class="pb-3">
 
-                    <label for="dedication">
                         <h4>Dedication / Work Ethic / Heart: </h4>
-                    </label>
+                
                     <p>Please share a specific example of your dedication and work ethic.</p>
                     <textarea
                         rows="4"
@@ -172,9 +201,8 @@
                 </div>
                 <div class="pb-3">
 
-                    <label for="passion">
                         <h4>Passion / Persistence: </h4>
-                    </label>
+
                     <p>Please tell us about something you are passionate
                             about and have worked hard to achieve.
                             
@@ -195,6 +223,9 @@
                 </div>
                 </div>
             </form>
+        </div>
+        <div>
+            <footer class="d-flex justify-content-center text-muted mt-3 mb-3">This form was created inside of Base Camp Coding Academy.</footer>
         </div>
     </body>
 </html>
