@@ -14,8 +14,8 @@
             crossorigin="anonymous"
         />
     </head>
-    <body class="application-bg bg-light">
-        <nav style="background-color: #3b1b0c" class="navbar navbar-expand-lg pb-3 sticky">
+    <body class="bg-light">
+        <nav style="background-color: #3b1b0c" class="navbar navbar-expand-lg border-bottom border-dark sticky">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link text-white" href='/'> Home </a>
@@ -25,11 +25,26 @@
                 </li>
             </ul>
         </nav>
-    <div class="content">
-        <div class="basecamp-logo">
-
-            <img src="css/images/basecamp-logo.png" alt="">
-        </div>
+        <header id="myCarousel" class="carousel slide">
+                <!-- Wrapper for Slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <!-- Set the first background image using inline CSS below. -->
+                        <div
+                            class="fill"
+                            style="background-image:url('css/images/home-top-bg.png');"
+                        >
+                            <span class="center-spacer"></span>
+                            <img
+                                src="css/images/basecamp-logo.png"
+                                style="vertical-align:middle;"
+                                alt="Base Camp Coding Academy"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </header>
+    <div class="">
         <div class="container application-box pt-3 border p-4 bg-white shadow">
             <div class="pb-3">
                 <div style="background-color: #6e4015" class="card ">

@@ -15,10 +15,10 @@
         />
         <noscript> <link rel="stylesheet" href="/css/noscript.css"/></noscript>
     </head>
-    <body>
+    <body class="bg-light">
         <nav
             style="background-color: #3b1b0c"
-            class="navbar navbar-expand-lg pb-3"
+            class="navbar navbar-expand-lg border-bottom border-dark sticky"
         >
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
@@ -31,25 +31,45 @@
                 </li>
             </ul>
         </nav>
-
-        <div class="container pt-5 pb-5">
-            <div class="card pt-5 pb-5" style="background-color: #75d2f3">
-                <div class="card-body text-white text-center">
-                    <h1 class="card-title">Welcome</h1>
+        <header id="myCarousel" class="carousel slide">
+            <!-- Wrapper for Slides -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <!-- Set the first background image using inline CSS below. -->
+                    <div
+                        class="fill"
+                        style="background-image:url('css/images/home-top-bg.png');"
+                    >
+                        <span class="center-spacer"></span>
+                        <img
+                            src="css/images/basecamp-logo.png"
+                            style="vertical-align:middle;"
+                            alt="Base Camp Coding Academy"
+                        />
+                    </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="container pb-3">
-            <h1> What is Base Camp Coding Academy? </h1>
-            <p>Located in Water Valley, MS, Base Camp Coding Academy (BCCA) is a hands-on, challenging and fun program, designed to train students to be software developers in 12 months. </p>
-            
-            
-            <p>In a small classroom setting, you will work with real world technologies to learn the fundamentals of coding, app development and the life leadership skills you will need to 
-            be successful in your career and competitive in the job market.</p>
-        </div>
-        <div class="container">
-            <img src="css/images/home-bg.png" alt="" class="home-image" />
+        </header>
+        <div class="">
+            <div class="container pt-3 p-4">
+                <h1>What is Base Camp Coding Academy?</h1>
+                <p>
+                    Located in Water Valley, MS, Base Camp Coding Academy (BCCA)
+                    is a hands-on, challenging and fun program, designed to
+                    train students to be software developers in 12 months.
+                </p>
+
+                <p>
+                    In a small classroom setting, you will work with real world
+                    technologies to learn the fundamentals of coding, app
+                    development and the life leadership skills you will need to
+                    be successful in your career and competitive in the job
+                    market.
+                </p>
+            </div>
+            <div class="container">
+                <img src="css/images/home-bg.png" alt="" class="home-image" />
+            </div>
         </div>
     </body>
 </html>

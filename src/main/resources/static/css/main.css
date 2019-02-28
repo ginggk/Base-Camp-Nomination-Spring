@@ -1,21 +1,36 @@
 .application-box {
     width: 56rem !important;
-    margin-top: 4rem;
-}
-.application-bg {
-    background-image: url("images/home-top-bg.png");
-    background-repeat: no-repeat;
-    background-size: 100% 10%;
+    margin-top: 1rem;
 }
 .basecamp-logo {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 7rem;
 }
 
 .content {
     padding-top: 75px;
 }
 
+.center-spacer {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.fill {
+    width: 100%;
+    height: 20%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    text-align: center;
+}
+
+header {
+    padding-top: 56px;
+}
 .sticky {
     position: fixed !important;
     top: 0;
