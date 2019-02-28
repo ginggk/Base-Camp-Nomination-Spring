@@ -1,0 +1,8 @@
+.application-box {
+    width: 56rem !important;
+    margin-top: 15rem;
+}
+.application-bg {
+    background-image: url("images/application-bg.png");
+    background-repeat: no-repeat;
+}
