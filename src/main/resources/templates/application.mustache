@@ -15,7 +15,7 @@
         />
     </head>
     <body class="application-bg bg-light">
-        <nav style="background-color: #3b1b0c" class="navbar navbar-expand-lg pb-3">
+        <nav style="background-color: #3b1b0c" class="navbar navbar-expand-lg pb-3 sticky">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link text-white" href='/'> Home </a>
@@ -25,11 +25,12 @@
                 </li>
             </ul>
         </nav>
+    <div class="content">
         <div class="basecamp-logo">
 
             <img src="css/images/basecamp-logo.png" alt="">
         </div>
-        <div class="container application-box pt-3 border p-4 bg-white shadow-sm">
+        <div class="container application-box pt-3 border p-4 bg-white shadow">
             <div class="pb-3">
                 <div style="background-color: #6e4015" class="card ">
                     <div class="card-body text-center text-white">
@@ -61,7 +62,7 @@
             <form class=" d-flex flex-column" action="/apply" method="POST">
                 <div class="form-group">
                         <h4>Name: </h4>
-                        <input type="text" name="name" value="John Doe" required/>
+                        <input type="text" name="name" placeholder="John Doe" required/>
                   
                 </div>
                 <div class="form-group">
@@ -70,14 +71,15 @@
                         <input
                             type="email"
                             name="email"
-                            value="johndoe@email.com"
+                            placeholder="johndoe@email.com"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         />
                   
                 </div>
                 <div class="form-group">
 
                    <h4> Current School:</h4>
-                        <input type="text" name="school" value="High School" required/>
+                        <input type="text" name="school" placeholder="Town High School" required/>
                     
                 </div>
                 <div class="form-group">
@@ -120,7 +122,7 @@
                 <div class="form-group">
 
                     <h4> Age:</h4>
-                        <input type="number" name="age" value="18" />
+                        <input type="number" name="age" placeholder="18" />
                 </div>
                 <div class="form-group">
 
@@ -130,14 +132,14 @@
                             type="text"
                             name="phoneNumber"
                             placeholder="123-456-7890"
-                            value="123-456-7890"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                         required />
                 </div>
                 <div class="form-group">
 
                     <h4>Graduation Date:</h4>
                         
-                        <input type="text" name="graduation" value="02/14/20" required/>
+                        <input type="text" name="graduation" placeholder="02/14/20"  pattern="[0-9]{2}/[0-9]{2}/[0-9]{2}" required/>
                   
                 </div>
 
@@ -155,9 +157,7 @@
 
                 </div>
 
-
-
-
+                
 
                 <div class="pb-3">
 
@@ -227,5 +227,6 @@
         <div>
             <footer class="d-flex justify-content-center text-muted mt-3 mb-3">This form was created inside of Base Camp Coding Academy.</footer>
         </div>
+    </div>
     </body>
 </html>
