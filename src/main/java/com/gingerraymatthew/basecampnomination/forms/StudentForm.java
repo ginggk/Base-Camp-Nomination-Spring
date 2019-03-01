@@ -57,8 +57,14 @@ public class StudentForm {
         this.school = school;
     }
 
-    public Boolean getEligibility() {
-        return eligibility;
+    public String getEligibility() {
+        if (eligibility == true) {
+            return "Yes";
+        } else if (eligibility == false){
+            return  "No";
+        } else {
+            return "Data Error";
+        }
     }
 
     public void setEligibility(Boolean eligibility) {
