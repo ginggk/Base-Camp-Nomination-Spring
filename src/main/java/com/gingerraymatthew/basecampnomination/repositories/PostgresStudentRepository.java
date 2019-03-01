@@ -36,6 +36,7 @@ public class PostgresStudentRepository implements com.gingerraymatthew.basecampn
 
     public StudentForm mapRowToStudent(ResultSet row, int rowNum) throws SQLException{
         return new StudentForm(
+                row.getInt("id"),
                 row.getString("name"),
                 row.getString("email"),
                 row.getString("school"),

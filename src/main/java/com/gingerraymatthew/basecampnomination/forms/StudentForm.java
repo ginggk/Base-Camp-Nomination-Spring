@@ -1,12 +1,13 @@
 package com.gingerraymatthew.basecampnomination.forms;
 
 
+import java.io.Serializable;
 import java.net.URL;
 import java.util.Date;
 
 
 public class StudentForm {
-
+    public Integer id;
     public String name;
     public String email;
     public String school;
@@ -19,7 +20,8 @@ public class StudentForm {
     public String dedication;
     public  String passion;
 
-    public StudentForm(String name, String email, String school, Boolean eligibility, Integer age, String phoneNumber, Date graduation, String plan, String aptitude, String dedication, String passion) {
+    public StudentForm(Integer id, String name, String email, String school, Boolean eligibility, Integer age, String phoneNumber, Date graduation, String plan, String aptitude, String dedication, String passion) {
+        this.id = id;
         this.name = name;
         this.email = email;
         this.school = school;
@@ -31,6 +33,10 @@ public class StudentForm {
         this.aptitude = aptitude;
         this.dedication = dedication;
         this.passion = passion;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public String getName() {

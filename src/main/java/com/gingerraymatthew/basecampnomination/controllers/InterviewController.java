@@ -23,6 +23,7 @@ public class InterviewController {
     @GetMapping
     public String getInterview(Model model) {
         model.addAttribute("interview", studentRepository.findAll());
+        System.out.println("IT'S RIGHT HERE!");
         return "interview";
     }
 
