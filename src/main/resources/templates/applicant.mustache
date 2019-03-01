@@ -31,8 +31,39 @@
                 </li>
             </ul>
         </nav>
+        <header id="myCarousel" class="carousel slide">
+                <!-- Wrapper for Slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <!-- Set the first background image using inline CSS below. -->
+                        <div
+                            class="fill"
+                            style="background-image:url('../css/images/home-top-bg.png');"
+                        >
+                            <span class="center-spacer"></span>
+                            <img
+                                src="../css/images/basecamp-logo.png"
+                                style="vertical-align:middle;"
+                                alt="Base Camp Coding Academy"
+                            />
+                        </div>
+                    </div>
+                </div>
+        </header>
+        
 
-        {{#applicants}}
-        {{.}}
-        {{/applicants}}
+        {{#applicant}}
+        <!-- name
+            email,
+            school,
+            eligibility,
+            age,
+            phoneNumber,
+            graduation,
+            plan,
+            aptitude,
+            dedication,
+            passion -->
+        <p>{{name}}</p>
+        {{/applicant}}
 </html>
