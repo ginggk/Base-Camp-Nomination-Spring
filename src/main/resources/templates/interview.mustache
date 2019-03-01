@@ -50,17 +50,21 @@
             </div>
         </header>
         <div class="items style1 medium onscroll-fade-in">
-                        {{#interview}}
-                        <section>
-                            <header>
-                                <h3>
-                                    <a href="/interview">{{name}}</a>
-                                </h3>
-                                <p>{{email}}</p>
-                            </header>
-                            <p>{{school}}</p>
-                        </section>
-                        {{/interview}}
+            {{#interview}}
+            <div class="container">
+                <div class="pb-2 pt-4">
+                    <div class="card shadow p-3 mb-5 bg-white rounded">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">
+                                <a href="/interview">{{ name }}</a>
+                            </h3>
+                            <p class="card-text">{{ email }}</p>
+                            
+                            <p class="card-text">{{ school }}</p>
+                    </div>
+                </div>
+            </div>
+            {{/interview}}
         </div>
     </body>
 </html>
