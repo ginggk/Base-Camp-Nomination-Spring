@@ -124,4 +124,8 @@ public class StudentForm {
        return (name != null && email != null && school != null && eligibility != null && age != null && phoneNumber != null && graduation != null &&
                plan != null && aptitude != null && dedication != null && passion != null);
     }
+
+    public String asString(StudentForm student) {
+        return student.name;
+    }
 }
