@@ -64,10 +64,11 @@ public class StudentForm {
     }
 
     public String getEligibility() {
+        StringBuilder html = new StringBuilder();
         if (eligibility == true) {
-            return "Yes";
+            return "✔️";
         } else if (eligibility == false){
-            return  "No";
+            return  "❌";
         } else {
             return "Data Error";
         }

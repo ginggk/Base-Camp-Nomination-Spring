@@ -59,10 +59,15 @@
         </div>
                 <div class="items style1 medium onscroll-fade-in">
             {{#interview}}
+                <a href="interview/{{id}}">
             <div class="container">
-                <div>{{name}}, {{school}} </div>
+                <div class="d-flex justify-content-between pl-5 pr-5">
+                    <span>{{name}}, {{school}} </span>
+                    <span class="text-success">{{eligibility}}</span>
+                </div>
                 <hr>
              </div>
+                </a>
             </div>
             {{/interview}}
         </div>
