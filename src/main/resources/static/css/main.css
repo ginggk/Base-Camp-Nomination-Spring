@@ -65,7 +65,9 @@ header {
     float: right;
 }
 .interview-link:hover {
-    background-color: #929caa;
+    background-color: #819aa1;
     color: white;
 }
-
+.link-text:hover {
+    text-decoration: none;
+}
