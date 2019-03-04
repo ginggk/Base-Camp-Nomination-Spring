@@ -2,6 +2,7 @@
     width: 56rem !important;
     margin-top: 1rem;
 }
+
 .basecamp-logo {
     text-align: center;
     margin-top: 7rem;
@@ -9,7 +10,7 @@
 
 body {
     font-size: 14px !important;
-    }
+}
 
 .content {
     padding-top: 75px;
@@ -39,7 +40,8 @@ header {
 #home-footer {
     margin-top: 50px;
     margin-bottom: 50px;
-    }
+}
+
 .sticky {
     position: fixed !important;
     top: 0;
@@ -51,4 +53,10 @@ header {
     padding-left: 8rem;
 }
 
+.student-border {
+    border: 5px double #89cbf4;
+}
 
+.darker-break {
+    background-color: black;
+}
