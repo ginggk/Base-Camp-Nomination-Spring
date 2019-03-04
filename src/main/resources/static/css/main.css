@@ -50,5 +50,6 @@ header {
 .home-image {
     padding-left: 8rem;
 }
-
-
+#ineligible-btn {
+    float: right;
+}
