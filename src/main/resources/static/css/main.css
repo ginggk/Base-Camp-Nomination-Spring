@@ -60,3 +60,7 @@ header {
 .darker-break {
     background-color: black;
 }
+
+#ineligible-btn {
+    float: right;
+}

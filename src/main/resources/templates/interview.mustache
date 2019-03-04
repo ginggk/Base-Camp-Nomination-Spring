@@ -49,27 +49,25 @@
                 </div>
             </div>
         </header>
-        <form method="GET">
-        <input type="submit" name="ABC" value="ABC" />
-        <input type="submit" name="Oldest-Newest" value="Oldest-Newest" />
-        <input type="submit" name="Newest-Oldest" value="Newest-Oldest" />
-        <input type="submit" name="Eligible" value="Eligible" />
-        <input type="submit" name="Ineligible" value="Ineligible" />
-        </form>
-        <div class="items style1 medium onscroll-fade-in">
+        <div class="container mt-3">
+            <form method="GET">
+                <input class="btn btn-info" type="submit" name="ABC" value="ABC" />
+                <input class="btn btn-info" type="submit" name="Oldest-Newest" value="Oldest-Newest" />
+                <input class="btn btn-info" type="submit" name="Newest-Oldest" value="Newest-Oldest" />
+                <input class="btn btn-info" type="submit" name="Ineligible" id="ineligible-btn" value="Ineligible" />
+            </form>
+        </div>
+         <div class="items style1 medium onscroll-fade-in">
             {{#interview}}
+                <a href="interview/{{id}}">
             <div class="container">
-                <div class="pb-2 pt-4">
-                    <div class="card shadow p-3 mb-5 bg-white rounded">
-                        <div class="card-body text-center">
-                            <h3 class="card-title">
-                                <a href="/interview/{{id}}">{{ name }}</a>
-                            </h3>
-                            <p class="card-text">{{ email }}</p>
-                            
-                            <p class="card-text">{{ school }}</p>
-                    </div>
+                <div class="d-flex justify-content-between pl-5 pr-5">
+                    <span>{{name}}, {{school}} </span>
+                    <span class="text-success">{{eligibility}}</span>
                 </div>
+                <hr>
+             </div>
+                </a>
             </div>
             {{/interview}}
         </div>
