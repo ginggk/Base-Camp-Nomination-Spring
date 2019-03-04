@@ -36,9 +36,21 @@ public class InterviewController {
         return "interview";
     }
 
-    @RequestMapping(params="", method=RequestMethod.GET)
-    public String getInterviewAsc(Model model) {
+    @RequestMapping(params="Oldest-Newest", method=RequestMethod.GET)
+    public String getInterviewOldest(Model model) {
         model.addAttribute("interview", studentRepository.findAll());
+        return "interview";
+    }
+
+    @RequestMapping(params="Newest-Oldest", method=RequestMethod.GET)
+    public String getInterviewNewest(Model model) {
+        model.addAttribute("interview", studentRepository.newest());
+        return "interview";
+    }
+
+    @RequestMapping(params="ABC", method=RequestMethod.GET)
+    public String getInterviewABC(Model model) {
+        model.addAttribute("interview", studentRepository.abc());
         return "interview";
     }
 

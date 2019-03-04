@@ -31,6 +31,14 @@ public class PostgresStudentRepository implements com.gingerraymatthew.basecampn
     }
 
     public List<StudentForm> findAll() {
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students ORDER BY id ASC", this::mapRowToStudent);
+    }
+
+    public List<StudentForm> newest() {
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students ORDER BY id DESC", this::mapRowToStudent);
+    }
+
+    public List<StudentForm> abc() {
         return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students ORDER BY name ASC", this::mapRowToStudent);
     }
 
