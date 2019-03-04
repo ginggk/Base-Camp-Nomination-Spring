@@ -64,3 +64,8 @@ header {
 #ineligible-btn {
     float: right;
 }
+.interview-link:hover {
+    background-color: #929caa;
+    color: white;
+}
+
