@@ -13,6 +13,7 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
         <noscript> <link rel="stylesheet" href="/css/noscript.css"/></noscript>
     </head>
     <body class="bg-light">
@@ -53,6 +54,7 @@
         
 
         {{#applicant}}
+
         <!-- name
             email,
             school,
@@ -64,6 +66,27 @@
             aptitude,
             dedication,
             passion -->
-        <p>{{name}}</p>
+            <div class="container pt-3 pb-3 pr-3">
+                <div class="pl-3 student-border pt-3">
+                    <h1><i class="fas fa-list-ul"></i> {{name}}</h1>
+                    <p class="">- Age: {{age}}</p>
+                    <p>- Phone Number: {{phoneNumber}}</p>
+                    <p>- Are they eligible? {{eligibility}}</p>
+                    <p>- Email address: {{email}}</p>
+                    <p>- Graduation Date: {{graduation}}</p>
+                    <p>- High School: {{school}}</p>
+                    <hr class="darker-break"/>
+                    <h4>----Essay Questions----</h4>
+                    <p>- What was their plan before Base Camp? </p>
+                    <p>Answer: {{plan}} </p>
+                    <p>- A time when they were a problem solver... </p>
+                    <p class="">Answer: {{aptitude}} </p>
+                    <p>- Are they dedicated?</p>
+                    <p> Answer: {{dedication}}</p>
+                    <p>- What they are passionate about... </p>
+                    <p class="">Answer: {{passion}}</p>
+                    
+                </div>
+            </div>
         {{/applicant}}
 </html>
