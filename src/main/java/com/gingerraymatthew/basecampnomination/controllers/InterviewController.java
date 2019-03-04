@@ -6,10 +6,7 @@ import com.gingerraymatthew.basecampnomination.repositories.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/interview")
@@ -23,6 +20,18 @@ public class InterviewController {
 
     @GetMapping
     public String getInterview(Model model) {
+        model.addAttribute("interview", studentRepository.findAll());
+        return "interview";
+    }
+
+    @RequestMapping(params="Desc", method=RequestMethod.GET)
+    public String getInterviewDesc(Model model) {
+        model.addAttribute("interview", studentRepository.findAllDesc());
+        return "interview";
+    }
+
+    @RequestMapping(params="Asc", method=RequestMethod.GET)
+    public String getInterviewAsc(Model model) {
         model.addAttribute("interview", studentRepository.findAll());
         return "interview";
     }

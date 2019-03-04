@@ -6,6 +6,8 @@ import java.util.Optional;
 public interface Repository<T> {
     List<T> findAll();
 
+    List<T> findAllDesc();
+
     Optional<T> findById(Integer id);
 
     void save(T t);

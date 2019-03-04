@@ -31,7 +31,11 @@ public class PostgresStudentRepository implements com.gingerraymatthew.basecampn
     }
 
     public List<StudentForm> findAll() {
-        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students", this::mapRowToStudent);
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students ORDER BY name ASC", this::mapRowToStudent);
+    }
+
+    public List<StudentForm> findAllDesc() {
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students ORDER BY name DESC", this::mapRowToStudent);
     }
 
     public StudentForm mapRowToStudent(ResultSet row, int rowNum) throws SQLException{
