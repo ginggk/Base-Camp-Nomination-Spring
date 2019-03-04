@@ -6,11 +6,11 @@ import java.util.Optional;
 public interface Repository<T> {
     List<T> findAll();
 
+    List<T> oldest();
+
     List<T> newest();
 
     List<T> abc();
-
-    List<T> eligible();
 
     List<T> ineligible();
 

@@ -24,12 +24,6 @@ public class InterviewController {
         return "interview";
     }
 
-    @RequestMapping(params="Eligible", method=RequestMethod.GET)
-    public String getEligible(Model model) {
-        model.addAttribute("interview", studentRepository.eligible());
-        return "interview";
-    }
-
     @RequestMapping(params="Ineligible", method=RequestMethod.GET)
     public String getIneligible(Model model) {
         model.addAttribute("interview", studentRepository.ineligible());
@@ -38,7 +32,7 @@ public class InterviewController {
 
     @RequestMapping(params="Oldest-Newest", method=RequestMethod.GET)
     public String getInterviewOldest(Model model) {
-        model.addAttribute("interview", studentRepository.findAll());
+        model.addAttribute("interview", studentRepository.oldest());
         return "interview";
     }
 
