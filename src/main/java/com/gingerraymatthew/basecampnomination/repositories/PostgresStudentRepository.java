@@ -34,16 +34,16 @@ public class PostgresStudentRepository implements com.gingerraymatthew.basecampn
         return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students ORDER BY id ASC", this::mapRowToStudent);
     }
 
+    public List<StudentForm> oldest() {
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students WHERE eligibility = true ORDER BY id ASC", this::mapRowToStudent);
+    }
+
     public List<StudentForm> newest() {
-        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students ORDER BY id DESC", this::mapRowToStudent);
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students WHERE eligibility = true ORDER BY id DESC", this::mapRowToStudent);
     }
 
     public List<StudentForm> abc() {
-        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students ORDER BY name ASC", this::mapRowToStudent);
-    }
-
-    public List<StudentForm> eligible() {
-        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students WHERE eligibility = true ORDER BY school ASC, name ASC", this::mapRowToStudent);
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students WHERE eligibility = true ORDER BY name ASC", this::mapRowToStudent);
     }
 
     public List<StudentForm> ineligible() {
