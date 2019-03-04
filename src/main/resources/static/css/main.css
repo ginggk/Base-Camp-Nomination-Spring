@@ -7,6 +7,10 @@
     margin-top: 7rem;
 }
 
+body {
+    font-size: 14px !important;
+    }
+
 .content {
     padding-top: 75px;
 }
@@ -29,8 +33,13 @@
 }
 
 header {
-    padding-top: 56px;
+    padding-top: 54px;
 }
+
+#home-footer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
 .sticky {
     position: fixed !important;
     top: 0;

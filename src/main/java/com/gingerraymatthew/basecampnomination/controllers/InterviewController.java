@@ -24,13 +24,19 @@ public class InterviewController {
         return "interview";
     }
 
-    @RequestMapping(params="Desc", method=RequestMethod.GET)
-    public String getInterviewDesc(Model model) {
-        model.addAttribute("interview", studentRepository.findAllDesc());
+    @RequestMapping(params="Eligible", method=RequestMethod.GET)
+    public String getEligible(Model model) {
+        model.addAttribute("interview", studentRepository.eligible());
         return "interview";
     }
 
-    @RequestMapping(params="Asc", method=RequestMethod.GET)
+    @RequestMapping(params="Ineligible", method=RequestMethod.GET)
+    public String getIneligible(Model model) {
+        model.addAttribute("interview", studentRepository.ineligible());
+        return "interview";
+    }
+
+    @RequestMapping(params="", method=RequestMethod.GET)
     public String getInterviewAsc(Model model) {
         model.addAttribute("interview", studentRepository.findAll());
         return "interview";

@@ -6,7 +6,9 @@ import java.util.Optional;
 public interface Repository<T> {
     List<T> findAll();
 
-    List<T> findAllDesc();
+    List<T> eligible();
+
+    List<T> ineligible();
 
     Optional<T> findById(Integer id);
 
