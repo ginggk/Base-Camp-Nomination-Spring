@@ -10,5 +10,6 @@ CREATE TABLE IF NOT EXISTS students (
     plan TEXT,
     aptitude TEXT,
     dedication TEXT,
-    passion TEXT
+    passion TEXT,
+    basecamp TEXT
 );

@@ -22,38 +22,42 @@ public class PostgresStudentRepository implements com.gingerraymatthew.basecampn
 
     public void save(StudentForm student) {
 
-        jdbc.update("INSERT INTO students (name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", student.name, student.email,
-        student.school, student.eligibility, student.age, student.phoneNumber, student.graduation, student.plan, student.aptitude, student.dedication, student.passion);
+        jdbc.update("INSERT INTO students (name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion, basecamp) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", student.name, student.email,
+        student.school, student.eligibility, student.age, student.phoneNumber, student.graduation, student.plan, student.aptitude, student.dedication, student.passion, student.basecamp);
     }
 
     public Optional<StudentForm> findById(Integer id) {
-        return Optional.ofNullable(jdbc.queryForObject("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students where id = ?", this::mapRowToStudent, id));
+        return Optional.ofNullable(jdbc.queryForObject("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion, basecamp FROM students where id = ?", this::mapRowToStudent, id));
     }
 
     public List<StudentForm> findAll() {
-        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students ORDER BY id ASC", this::mapRowToStudent);
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion, basecamp FROM students ORDER BY id ASC", this::mapRowToStudent);
     }
 
     public List<StudentForm> oldest() {
-        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students WHERE eligibility = true ORDER BY id ASC", this::mapRowToStudent);
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion, basecamp FROM students WHERE eligibility = true ORDER BY id ASC", this::mapRowToStudent);
     }
 
     public List<StudentForm> newest() {
-        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students WHERE eligibility = true ORDER BY id DESC", this::mapRowToStudent);
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion, basecamp FROM students WHERE eligibility = true ORDER BY id DESC", this::mapRowToStudent);
     }
 
     public List<StudentForm> abc() {
-        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students WHERE eligibility = true ORDER BY name ASC", this::mapRowToStudent);
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion, basecamp FROM students WHERE eligibility = true ORDER BY name ASC", this::mapRowToStudent);
     }
 
     public List<StudentForm> ineligible() {
-        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students WHERE eligibility = false ORDER BY name ASC", this::mapRowToStudent);
+        return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion, basecamp FROM students WHERE eligibility = false ORDER BY name ASC", this::mapRowToStudent);
     }
 
     public Boolean check(String email) {
         String sql = "SELECT * FROM students WHERE email = " + email;
-        Optional<StudentForm> student =  Optional.ofNullable(jdbc.queryForObject("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students where email = ?", this::mapRowToStudent, email));
-        return (student.get().getEmail() == email);
+        List<StudentForm> table = jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion, basecamp FROM students where email = ?", this::mapRowToStudent, email);
+        if (table.size() > 0) {
+            return false;
+        } else {
+            return true;
+        }
     }
 
     public StudentForm mapRowToStudent(ResultSet row, int rowNum) throws SQLException{
@@ -69,7 +73,8 @@ public class PostgresStudentRepository implements com.gingerraymatthew.basecampn
                 row.getString("plan"),
                 row.getString("aptitude"),
                 row.getString("dedication"),
-                row.getString("passion"));
+                row.getString("passion"),
+                row.getString("basecamp"));
     }
 }
 

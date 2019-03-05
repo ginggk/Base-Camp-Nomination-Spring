@@ -18,9 +18,10 @@ public class StudentForm {
     public String plan;
     public String aptitude;
     public String dedication;
-    public  String passion;
+    public String passion;
+    public String basecamp;
 
-    public StudentForm(Integer id, String name, String email, String school, Boolean eligibility, Integer age, String phoneNumber, Date graduation, String plan, String aptitude, String dedication, String passion) {
+    public StudentForm(Integer id, String name, String email, String school, Boolean eligibility, Integer age, String phoneNumber, Date graduation, String plan, String aptitude, String dedication, String passion, String basecamp) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -33,6 +34,7 @@ public class StudentForm {
         this.aptitude = aptitude;
         this.dedication = dedication;
         this.passion = passion;
+        this.basecamp = basecamp;
     }
 
     public Integer getId() {
@@ -142,6 +144,15 @@ public class StudentForm {
     public void setPassion(String passion) {
         this.passion = passion;
     }
+
+    public String getBasecamp() {
+        return basecamp;
+    }
+
+    public void setBasecamp(String basecamp) {
+        this.basecamp = basecamp;
+    }
+
     public boolean isValid() {
        return (name != null && email != null && school != null && eligibility != null && age != null && phoneNumber != null && graduation != null &&
                plan != null && aptitude != null && dedication != null && passion != null);
