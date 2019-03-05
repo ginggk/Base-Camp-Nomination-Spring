@@ -155,7 +155,7 @@ public class StudentForm {
 
     public boolean isValid() {
        return (name != null && email != null && school != null && eligibility != null && age != null && phoneNumber != null && graduation != null &&
-               plan != null && aptitude != null && dedication != null && passion != null);
+               plan != null && aptitude != null && dedication != null && passion != null && basecamp != null);
     }
 
     public String asString(StudentForm student) {
