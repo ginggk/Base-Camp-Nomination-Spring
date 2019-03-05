@@ -26,7 +26,7 @@ public class ApplicationController {
 
     @PostMapping
     public String postApplication(StudentForm student) {
-        if (student.isValid()) {
+        if (student.isValid() && studentRepository.check(student.getEmail())) {
             studentRepository.save(student);
             System.out.println("SUCCESS");
             return "landing";

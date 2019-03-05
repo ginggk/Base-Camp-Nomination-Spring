@@ -50,6 +50,12 @@ public class PostgresStudentRepository implements com.gingerraymatthew.basecampn
         return jdbc.query("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students WHERE eligibility = false ORDER BY name ASC", this::mapRowToStudent);
     }
 
+    public Boolean check(String email) {
+        String sql = "SELECT * FROM students WHERE email = " + email;
+        Optional<StudentForm> student =  Optional.ofNullable(jdbc.queryForObject("SELECT id, name, email, school, eligibility, age, phoneNumber, graduation, plan, aptitude, dedication, passion FROM students where email = ?", this::mapRowToStudent, email));
+        return (student.get().getEmail() == email);
+    }
+
     public StudentForm mapRowToStudent(ResultSet row, int rowNum) throws SQLException{
         return new StudentForm(
                 row.getInt("id"),

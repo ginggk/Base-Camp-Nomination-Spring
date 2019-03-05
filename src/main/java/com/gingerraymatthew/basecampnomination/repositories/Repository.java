@@ -16,5 +16,7 @@ public interface Repository<T> {
 
     Optional<T> findById(Integer id);
 
+    Boolean check(String email);
+
     void save(T t);
 }
