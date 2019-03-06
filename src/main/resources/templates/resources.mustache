@@ -18,7 +18,7 @@
 
     <body class="bg-light">
             <nav style="background-color: #3b1b0c" class="navbar navbar-expand-lg border-bottom border-dark sticky">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav mr-auto nav">
                     <li class="nav-item">
                         <a class="nav-link text-white" href='/'> Home </a>
                     </li>
@@ -51,6 +51,11 @@
              <img scr="css/images/home-top-bg">
              <div class="container">
                      <form action="/resources" method="GET">
+                         {{#string}}
+                         <lower class="text-success mx-auto pb-3">
+                             {{.}}
+                         </lower>
+                         {{/string}}
                         <h1>Resources </h1>
                         <hr>
                         <ul>

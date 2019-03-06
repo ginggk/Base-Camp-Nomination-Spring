@@ -91,5 +91,13 @@ header {
         padding: 0;
         width: 100%;
     }
+
+    .nav {
+        flex-direction: row !important;
+    }
+
+    .nav li{
+        margin-right: 1rem !important;
+    }
 }
 

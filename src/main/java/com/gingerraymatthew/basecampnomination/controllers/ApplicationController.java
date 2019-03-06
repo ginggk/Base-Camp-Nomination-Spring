@@ -30,6 +30,8 @@ public class ApplicationController {
         if (student.isValid() && studentRepository.check(student.getEmail())) {
             studentRepository.save(student);
             System.out.println("SUCCESS");
+            String str = student.getName() + ", your application has been submitted!";
+            model.addAttribute("string", str);
             return "resources";
         } else {
             System.out.println("FAILURE");
